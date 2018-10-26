@@ -5,7 +5,7 @@ After=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python /usr/local/sbin/prometheus-rpi-exporter.py
+ExecStart=/usr/bin/python /usr/local/bin/prometheus-rpi-exporter.py
 
 [Install]
 WantedBy=multi-user.target

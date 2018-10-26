@@ -1,0 +1,11 @@
+[Unit]
+Description=RPi Exporter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /usr/local/sbin/prometheus-rpi-exporter.py
+
+[Install]
+WantedBy=multi-user.target

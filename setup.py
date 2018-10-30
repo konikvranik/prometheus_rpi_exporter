@@ -2,13 +2,12 @@
 
 from distutils.core import setup
 
-setup(name='Distutils',
+setup(name='Prometheus RPi exporter',
       version='1.0',
-      description='Python Distribution Utilities',
-      author='Greg Ward',
-      author_email='gward@python.net',
-      url='https://www.python.org/sigs/distutils-sig/',
-      packages=['.'],
+      description='Prometheus exporter for RPi runtime statistics such as CPU temperature.',
+      author='Petr Vraník',
+      author_email='petr@vranik.name',
+      url='https://github.com/konikvranik/prometheus_rpi_exporter',
       scripts=['prometheus-rpi-exporter.py'],
       data_files=[('/etc/systemd/system', ['rpi_exporter.service'])]
      )

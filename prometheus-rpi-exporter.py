@@ -23,7 +23,7 @@ class RPiCollector(object):
         temperature = int(f.read()) * 0.001
         metric = GaugeMetricFamily('temperature', 'RPi temperature', labels=['node', 'domain','type', 'sensor', 'unit'])
         metric.add_metric([str(socket.gethostname()), 'sensor', 'temperature', 'rpi', u'°C'], temperature)
-        logger.info("Temperature: %f", temperature)
+        logger.info("Temperature: %f", temperature )
         yield metric
 
 if __name__ == "__main__":

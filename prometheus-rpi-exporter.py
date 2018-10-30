@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import socket
+from systemd.journal import JournaldLogHandler
+import time
+import logging
 from prometheus_client import start_http_server
 from prometheus_client.core import GaugeMetricFamily, StateSetMetricFamily, REGISTRY
-import logging
-import time
-from systemd.journal import JournaldLogHandler
-import socket
 
 logger = logging.getLogger(__name__)
 journald_handler = JournaldLogHandler()
